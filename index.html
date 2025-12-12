@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>NZ South Island · Trip Journal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#070A13;
+  --card:rgba(2,6,23,.78);
+  --text:#F8FAFC;
+  --sub:#A1A1AA;
+  --line:rgba(148,163,184,.28);
+  --accent:#38BDF8;
+  --warn:#F59E0B;
+  --ok:#34D399;
+  --shadow:0 26px 70px rgba(0,0,0,.55);
+  --r:22px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Montserrat,system-ui;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(56,189,248,.16), transparent 42%),
+    radial-gradient(circle at 82% 6%, rgba(245,158,11,.11), transparent 46%),
+    #000;
+  color:var(--text);
+}
+.wrap{max-width:1180px;margin:auto;padding:20px}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  box-shadow:var(--shadow);
+  margin-bottom:18px;
+}
+.pad{padding:18px}
+h1,h2,h3{margin:0}
+h2{font-size:1.8rem}
+.sub{color:var(--sub);margin-top:6px}
+.timeline{display:grid;gap:14px}
+
+.day{
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:14px 16px;
+  background:rgba(15,23,42,.45);
+}
+.day h3{font-size:1.05rem}
+.day .meta{color:var(--sub);font-size:.85rem;margin:4px 0 10px}
+
+.stop{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:14px;
+  background:rgba(2,6,23,.45);
+  border:1px solid rgba(148,163,184,.18);
+  margin-bottom:8px;
+}
+.stop .icon{width:28px;text-align:center}
+.stop .name{flex:1}
+.time{
+  color:var(--warn);
+  font-weight:800;
+  font-size:.75rem;
+  margin-left:6px;
+}
+
+.nav{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:6px;
+}
+a.btn{
+  text-decoration:none;
+  padding:6px 10px;
+  border-radius:12px;
+  font-size:.78rem;
+  border:1px solid var(--line);
+  color:var(--text);
+  background:rgba(15,23,42,.65);
+}
+a.btn.drive{border-color:var(--warn)}
+a.btn.walk{border-color:var(--accent)}
+
+.mode{
+  font-size:.7rem;
+  color:var(--sub);
+}
+
+.footer{
+  text-align:center;
+  color:var(--sub);
+  font-size:.75rem;
+  margin-top:24px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <div class="card pad">
+    <h2>从沈阳冬夜到瓦纳卡日落</h2>
+    <div class="sub">一场属于我们的公路电影 · Excel 驱动 · 自动导航</div>
+  </div>
+
+  <div class="timeline" id="timeline"></div>
+
+  <div class="footer">
+    NZ South Island · Powered by Excel → JSON
+  </div>
+
+</div>
+
+<script>
+/* ===========================
+   工具函数
+=========================== */
+
+function cleanName(s){
+  return s.replace(/（.*?）|\(.*?\)/g,"").trim();
+}
+
+function isTimeSensitive(note){
+  return /必须|前|场次|点到|到达/.test(note||"");
+}
+
+function isDrive(a,b){
+  const key=/Airport|Lookout|Viewpoint|Track|Lake|Mt |Mount|Glacier|Springs|Bungy|Jet/i;
+  return key.test(a)||key.test(b);
+}
+
+function dirLink(a,b){
+  const mode=isDrive(a,b)?"driving":"walking";
+  return {
+    mode,
+    url:`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(cleanName(a))}&destination=${encodeURIComponent(cleanName(b))}&travelmode=${mode}`
+  };
+}
+
+/* ===========================
+   主渲染逻辑
+=========================== */
+
+fetch("data.json")
+  .then(res=>res.json())
+  .then(days=>{
+    const root=document.getElementById("timeline");
+
+    days.forEach(day=>{
+      const box=document.createElement("div");
+      box.className="day";
+
+      box.innerHTML=`
+        <h3>${day.date}</h3>
+        <div class="meta">Stops · ${day.stops.length}</div>
+      `;
+
+      day.stops.forEach((s,i)=>{
+        const stop=document.createElement("div");
+        stop.className="stop";
+
+        stop.innerHTML=`
+          <div class="icon">📍</div>
+          <div class="name">
+            ${s.place}
+            ${isTimeSensitive(s.note)?'<span class="time">⏰</span>':""}
+            ${s.note?`<div class="mode">${s.note}</div>`:""}
+          </div>
+        `;
+
+        if(i<day.stops.length-1){
+          const n=dirLink(s.place, day.stops[i+1].place);
+          const nav=document.createElement("div");
+          nav.className="nav";
+          nav.innerHTML=`
+            <a class="btn ${n.mode==='driving'?'drive':'walk'}"
+               target="_blank"
+               href="${n.url}">
+              ${n.mode==='driving'?'🚗 Drive':'🚶 Walk'}
+            </a>
+            <span class="mode">
+              ${cleanName(s.place)} → ${cleanName(day.stops[i+1].place)}
+            </span>
+          `;
+          stop.appendChild(nav);
+        }
+
+        box.appendChild(stop);
+      });
+
+      root.appendChild(box);
+    });
+  })
+  .catch(err=>{
+    document.getElementById("timeline").innerHTML=
+      "<div style='color:#f59e0b'>⚠️ 无法读取 data.json，请确认文件在同一目录</div>";
+    console.error(err);
+  });
+</script>
+
+</body>
+</html>
