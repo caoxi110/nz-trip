@@ -27,6 +27,7 @@ body{
   color:var(--text);
 }
 .wrap{max-width:1180px;margin:auto;padding:20px}
+
 .card{
   background:var(--card);
   border:1px solid var(--line);
@@ -41,12 +42,26 @@ body{
   border-radius:18px;
   padding:16px;
   background:rgba(15,23,42,.45);
-  margin-bottom:16px;
+  margin-bottom:18px;
 }
 .day h3{margin:0;font-size:1.05rem}
 .meta{color:var(--sub);font-size:.8rem;margin:4px 0 12px}
 
-/* -------- Stops -------- */
+/* 封面 */
+.cover{
+  height:220px;
+  border-radius:16px;
+  margin-bottom:12px;
+  display:flex;
+  align-items:flex-end;
+  padding:14px;
+  font-weight:800;
+  font-size:1.15rem;
+  color:white;
+  box-shadow: inset 0 -80px 80px rgba(0,0,0,.55);
+}
+
+/* Stops */
 .stop{
   display:flex;
   gap:10px;
@@ -60,9 +75,7 @@ body{
 .name{flex:1}
 .note{color:var(--sub);font-size:.75rem;margin-top:4px}
 
-.nav{
-  margin-top:6px;
-}
+.nav{margin-top:6px}
 a.btn{
   display:inline-block;
   text-decoration:none;
@@ -76,7 +89,7 @@ a.btn{
 a.btn.drive{border-color:var(--warn)}
 a.btn.walk{border-color:var(--accent)}
 
-/* -------- Details -------- */
+/* 时间线 */
 .details-toggle{
   margin-top:12px;
   cursor:pointer;
@@ -91,7 +104,6 @@ a.btn.walk{border-color:var(--accent)}
   background:rgba(2,6,23,.6);
   border-left:3px solid rgba(148,163,184,.4);
 }
-
 .timeline-item{
   display:grid;
   grid-template-columns:90px 1fr;
@@ -122,7 +134,7 @@ a.btn.walk{border-color:var(--accent)}
 
 <div class="card pad">
   <h2>从沈阳冬夜到瓦纳卡日落</h2>
-  <div class="meta">一场属于我们的公路电影 · 导航 + 手帐时间线</div>
+  <div class="meta">一场属于我们的公路电影 · 自动封面 · 导航 · 手帐时间线</div>
 </div>
 
 <div id="timeline"></div>
@@ -145,6 +157,45 @@ function dirLink(a,b){
     url:`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(cleanName(a))}&destination=${encodeURIComponent(cleanName(b))}&travelmode=${mode}`
   };
 }
+
+/* 自动封面 */
+function getCoverByDate(date, text){
+  // ① 按日期强制指定（最高优先级）
+  const byDate = {
+    "2026-02-16": { t:"Christchurch", i:"images/christchurch.jpg" },
+    "2026-02-17": { t:"Lake Tekapo",  i:"images/tekapo.jpg" },
+    "2026-02-18": { t:"Mount Cook",   i:"images/mount_cook.jpg" },
+    "2026-02-19": { t:"Wanaka",        i:"images/wanaka.jpg" },
+    "2026-02-20": { t:"Queenstown",    i:"images/queenstown.jpg" },
+    "2026-02-21": { t:"Glenorchy",     i:"images/glenorchy.jpg" },
+    "2026-02-22": { t:"Queenstown",    i:"images/queenstown.jpg" },
+    "2026-02-23": { t:"Queenstown",    i:"images/queenstown.jpg" }
+  };
+
+  if(byDate[date]) return byDate[date];
+
+  // ② 兜底：关键词自动匹配（你之前那套）
+  const list=[
+    {k:/Christchurch/i, t:"Christchurch", i:"images/christchurch.jpg"},
+    {k:/Tekapo/i,       t:"Lake Tekapo",  i:"images/tekapo.jpg"},
+    {k:/Cook|Mount Cook|Mt Cook/i, t:"Mount Cook", i:"images/mount_cook.jpg"},
+    {k:/Wanaka/i,       t:"Wanaka",        i:"images/wanaka.jpg"},
+    {k:/Queenstown/i,   t:"Queenstown",    i:"images/queenstown.jpg"},
+    {k:/Glenorchy/i,    t:"Glenorchy",     i:"images/glenorchy.jpg"}
+  ];
+
+  for(const c of list){
+    if(c.k.test(text)) return c;
+  }
+
+  // ③ 最终兜底
+  return {
+    t:"South Island",
+    i:"images/default.jpg"
+  };
+}
+
+/* 时间线解析 */
 function emojiClass(line){
   if(/🏨|🛏/.test(line)) return "tag-hotel";
   if(/🍽|🍜|☕|🍷/.test(line)) return "tag-food";
@@ -157,11 +208,11 @@ function emojiClass(line){
 function parseTimeline(text){
   return text.split("\n").map(l=>{
     const m=l.match(/^([0-9:＋+–\-]+)\s*[｜| ]?(.*)$/);
-    if(m) return {time:m[1],content:m[2]};
-    return {time:"",content:l};
+    return m?{time:m[1],content:m[2]}:{time:"",content:l};
   });
 }
 
+/* 渲染 */
 fetch("data.json")
 .then(r=>r.json())
 .then(data=>{
@@ -170,34 +221,38 @@ fetch("data.json")
   data.forEach(day=>{
     const box=document.createElement("div");
     box.className="day";
-    box.innerHTML=`<h3>${day.date}</h3><div class="meta">Stops · ${day.stops.length}</div>`;
 
-    /* ----- Sheet1: Stops + Navigation ----- */
+const cover = getCoverByDate(
+  day.date,
+  day.stops.map(s=>s.place).join(" ")
+);
+    const coverDiv=document.createElement("div");
+    coverDiv.className="cover";
+    coverDiv.style.background=`url(${cover.i}) center/cover`;
+    coverDiv.textContent=cover.t;
+    box.appendChild(coverDiv);
+
+    box.innerHTML+=`<h3>${day.date}</h3><div class="meta">Stops · ${day.stops.length}</div>`;
+
     day.stops.forEach((s,i)=>{
       const stop=document.createElement("div");
       stop.className="stop";
       stop.innerHTML=`
         <div class="icon">📍</div>
-        <div class="name">
-          ${s.place}
-          ${s.note?`<div class="note">${s.note}</div>`:""}
-        </div>
+        <div class="name">${s.place}${s.note?`<div class="note">${s.note}</div>`:""}</div>
       `;
       if(i<day.stops.length-1){
-        const n=dirLink(s.place, day.stops[i+1].place);
-        const nav=document.createElement("div");
-        nav.className="nav";
-        nav.innerHTML=`
-          <a class="btn ${n.mode==='driving'?'drive':'walk'}" target="_blank" href="${n.url}">
-            ${n.mode==='driving'?'🚗 Drive':'🚶 Walk'}
-          </a>
-        `;
-        stop.appendChild(nav);
+        const n=dirLink(s.place,day.stops[i+1].place);
+        stop.innerHTML+=`
+          <div class="nav">
+            <a class="btn ${n.mode==='driving'?'drive':'walk'}" target="_blank" href="${n.url}">
+              ${n.mode==='driving'?'🚗 Drive':'🚶 Walk'}
+            </a>
+          </div>`;
       }
       box.appendChild(stop);
     });
 
-    /* ----- Sheet2: Timeline ----- */
     if(day.note){
       const toggle=document.createElement("div");
       toggle.className="details-toggle";
