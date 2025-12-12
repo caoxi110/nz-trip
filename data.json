@@ -5,95 +5,70 @@
       {
         "order": 1,
         "place": "Christchurch Airport",
-        "note": "",
-        "time_sensitive": false,
-        "query": "Christchurch Airport"
+        "note": ""
       },
       {
         "order": 2,
         "place": "Smokey T's",
-        "note": "",
-        "time_sensitive": false,
-        "query": "Smokey T's"
+        "note": ""
       },
       {
         "order": 3,
         "place": "Fino Hotel and Suites",
-        "note": "🏨 999240760086254 18点前",
-        "time_sensitive": true,
-        "query": "Fino Hotel and Suites"
+        "note": "🏨 999240760086254 18点前"
       },
       {
         "order": 4,
         "place": "The Arts Centre Te Matatiki Toi Ora",
-        "note": "📸 艺术中心",
-        "time_sensitive": false,
-        "query": "The Arts Centre Te Matatiki Toi Ora"
+        "note": "📸 艺术中心"
       },
       {
         "order": 5,
         "place": "Bridge of Remembrance",
-        "note": "📸追忆桥",
-        "time_sensitive": false,
-        "query": "Bridge of Remembrance"
+        "note": "📸追忆桥"
       },
       {
         "order": 6,
         "place": "Riverside Market",
-        "note": "📸河岸市集",
-        "time_sensitive": false,
-        "query": "Riverside Market"
+        "note": "📸河岸市集"
       },
       {
         "order": 7,
         "place": "Cardboard Cathedral",
-        "note": "📸 纸板教堂",
-        "time_sensitive": false,
-        "query": "Cardboard Cathedral"
+        "note": "📸 纸板教堂"
       },
       {
         "order": 8,
         "place": "New Regent Street Precinct",
-        "note": "📸 新摄政街",
-        "time_sensitive": false,
-        "query": "New Regent Street Precinct New Zealand"
+        "note": "📸 新摄政街"
       },
       {
         "order": 9,
         "place": "Sumner Beach",
-        "note": "🌊 海边景",
-        "time_sensitive": false,
-        "query": "Sumner Beach"
+        "note": "🌊 海边景"
       },
       {
         "order": 10,
         "place": "Scarborough Road",
-        "note": "🌊 海边景",
-        "time_sensitive": false,
-        "query": "Scarborough Road New Zealand"
+        "note": "🌊 海边景"
       },
       {
         "order": 11,
         "place": "Bessie",
-        "note": "🍽️ 6–9:30PM",
-        "time_sensitive": false,
-        "query": "Bessie"
+        "note": "🍽️ 6–9:30PM"
       },
       {
         "order": 12,
         "place": "O.G.B Bar & Restaurant",
-        "note": "🍷",
-        "time_sensitive": false,
-        "query": "O.G.B Bar & Restaurant"
+        "note": "🍷"
       },
       {
         "order": 13,
         "place": "Boo's | Whiskey, Food & Music",
-        "note": "🍷",
-        "time_sensitive": false,
-        "query": "Boo's | Whiskey, Food & Music"
+        "note": "🍷"
       }
-    ]
+    ],
+    "note": "✈️ 10:50–13:00｜出境 · 电话卡 · 租车\n🚗 13:00–13:30｜机场 → Smokey T's\n🍽️ 13:30–14:40｜午餐\n🚗 14:40–15:00｜餐厅 → 酒店\n🏨 15:00–15:30｜入住 · 整顿\n🏙️ 15:30–17:30｜市区景点\n🚗 17:30–18:15｜市区 → Sumner\n🎉 18:15–19:30｜自由活动\n🍽️ 19:30–20:00｜Sumner → Bessie（6–9:30PM）\n🌙 20:00+｜回酒店休息"
   },
   {
     "date": "2026-02-17",
@@ -101,116 +76,85 @@
       {
         "order": 1,
         "place": "Fino Hotel and Suites",
-        "note": "",
-        "time_sensitive": false,
-        "query": "Fino Hotel and Suites"
+        "note": ""
       },
       {
         "order": 2,
         "place": "Rakaia Scenic Lookout",
-        "note": "🏞️ 途径景",
-        "time_sensitive": false,
-        "query": "Rakaia Scenic Lookout"
+        "note": "🏞️ 途径景"
       },
       {
         "order": 3,
         "place": "Four Square Fairlie",
-        "note": "🛒",
-        "time_sensitive": false,
-        "query": "Four Square Fairlie"
+        "note": "🛒"
       },
       {
         "order": 4,
         "place": "Fairlie Bakehouse",
-        "note": "🥐",
-        "time_sensitive": false,
-        "query": "Fairlie Bakehouse"
+        "note": "🥐"
       },
       {
         "order": 5,
         "place": "Astro Cafe",
-        "note": "☕ 14:30前必须到",
-        "time_sensitive": true,
-        "query": "Astro Cafe"
+        "note": "☕ 14:30前必须到"
       },
       {
         "order": 6,
         "place": "University of Canterbury Mt John Observatory",
-        "note": "📸 天文台",
-        "time_sensitive": false,
-        "query": "University of Canterbury Mt John Observatory"
+        "note": "📸 天文台"
       },
       {
         "order": 7,
         "place": "The Church of the Good Shepherd",
-        "note": "📸 好牧羊人教堂",
-        "time_sensitive": false,
-        "query": "The Church of the Good Shepherd"
+        "note": "📸 好牧羊人教堂"
       },
       {
         "order": 8,
         "place": "Peppers Bluewater Resort Lake Tekapo",
-        "note": "🏨",
-        "time_sensitive": false,
-        "query": "Peppers Bluewater Resort Lake Tekapo"
+        "note": "🏨"
       },
       {
         "order": 9,
         "place": "The Better Batter NZ",
-        "note": "🍔",
-        "time_sensitive": false,
-        "query": "The Better Batter NZ"
+        "note": "🍔"
       },
       {
         "order": 10,
         "place": "Playground at the lake",
-        "note": "🌳 公园景",
-        "time_sensitive": false,
-        "query": "Playground at the lake New Zealand"
+        "note": "🌳 公园景"
       },
       {
         "order": 11,
         "place": "Lakes Edge Holiday Park",
-        "note": "🌳 公园景",
-        "time_sensitive": false,
-        "query": "Lakes Edge Holiday Park"
+        "note": "🌳 公园景"
       },
       {
         "order": 12,
         "place": "Cowans Hill Walkway",
-        "note": "📸 薰衣草",
-        "time_sensitive": false,
-        "query": "Cowans Hill Walkway"
+        "note": "📸 薰衣草"
       },
       {
         "order": 13,
         "place": "Tekapo Springs & Stargazing",
-        "note": "♨️ 户外温泉",
-        "time_sensitive": false,
-        "query": "Tekapo Springs & Stargazing"
+        "note": "♨️ 户外温泉"
       },
       {
         "order": 14,
         "place": "Peppers Bluewater Resort Lake Tekapo",
-        "note": "🏨 5239792 or 5240801 PKQHBZDT",
-        "time_sensitive": false,
-        "query": "Peppers Bluewater Resort Lake Tekapo"
+        "note": "🏨 5239792 or 5240801 PKQHBZDT"
       },
       {
         "order": 15,
         "place": "TLV Restaurant & Bar",
-        "note": "12-9PM",
-        "time_sensitive": false,
-        "query": "TLV Restaurant & Bar"
+        "note": "12-9PM"
       },
       {
         "order": 16,
         "place": "The Cairns Golf Course - Lake Tekapo",
-        "note": "🌌 观星点",
-        "time_sensitive": false,
-        "query": "The Cairns Golf Course - Lake Tekapo"
+        "note": "🌌 观星点"
       }
-    ]
+    ],
+    "note": "🍳 07:00–07:30｜打包早餐 · 退房 · 加油\n🚗 07:30–11:00｜Christchurch → Fairlie\n🛒 11:00–12:00｜Fairlie 停留（Bakehouse · Four Square）\n🚗 12:00–13:00｜Fairlie → Tekapo\n🌌 13:00–14:30｜Mt John Observatory · Astro Café\n⏰ 14:30 前必须到\n⛪ 14:30–15:30｜Church of the Good Shepherd\n🚗 15:30–16:00｜教堂 → 酒店\n🏨 16:00–17:00｜入住 · 整顿\n🍽️ 17:00–17:30｜酒店 → 炸鱼薯条\n♨️ 17:30+｜温泉 · TLV Restaurant & Bar"
   },
   {
     "date": "2026-02-18",
@@ -218,102 +162,75 @@
       {
         "order": 1,
         "place": "Peppers Bluewater Resort Lake Tekapo",
-        "note": "",
-        "time_sensitive": false,
-        "query": "Peppers Bluewater Resort Lake Tekapo"
+        "note": ""
       },
       {
         "order": 2,
         "place": "The Greedy Cow Cafe",
-        "note": "☕ 早餐店",
-        "time_sensitive": false,
-        "query": "The Greedy Cow Cafe"
+        "note": "☕ 早餐店"
       },
       {
         "order": 3,
         "place": "Lake Pukaki Viewpoint",
-        "note": "🏞️ 途径景",
-        "time_sensitive": false,
-        "query": "Lake Pukaki Viewpoint"
+        "note": "🏞️ 途径景"
       },
       {
         "order": 4,
         "place": "Lake Pukaki Overnight Campervan Parking",
-        "note": "🏞️ 途径景",
-        "time_sensitive": false,
-        "query": "Lake Pukaki Overnight Campervan Parking"
+        "note": "🏞️ 途径景"
       },
       {
         "order": 5,
         "place": "Mt Cook Alpine Salmon Shop",
-        "note": "🍔 三文鱼",
-        "time_sensitive": false,
-        "query": "Mt Cook Alpine Salmon Shop"
+        "note": "🍔 三文鱼"
       },
       {
         "order": 6,
         "place": "Punatahu Visitor Center",
-        "note": "📸 玻璃房",
-        "time_sensitive": false,
-        "query": "Punatahu Visitor Center"
+        "note": "📸 玻璃房"
       },
       {
         "order": 7,
         "place": "Peter's Lookout",
-        "note": "🏞️ 途径景",
-        "time_sensitive": false,
-        "query": "Peter's Lookout"
+        "note": "🏞️ 途径景"
       },
       {
         "order": 8,
         "place": "Tasman Glacier Car Park",
-        "note": "🅿️ ",
-        "time_sensitive": false,
-        "query": "Tasman Glacier Car Park New Zealand"
+        "note": "🅿️ "
       },
       {
         "order": 9,
         "place": "Tasman Glacier View near the lake",
-        "note": "🧊 冰川徒步",
-        "time_sensitive": false,
-        "query": "Tasman Glacier View near the lake"
+        "note": "🧊 冰川徒步"
       },
       {
         "order": 10,
         "place": "Twizel",
-        "note": "⛽ 特威泽尔补给",
-        "time_sensitive": false,
-        "query": "Twizel"
+        "note": "⛽ 特威泽尔补给"
       },
       {
         "order": 11,
         "place": "MOBIL TWIZEL FUEL STATION",
-        "note": "⛽ 加油补给",
-        "time_sensitive": false,
-        "query": "MOBIL TWIZEL FUEL STATION"
+        "note": "⛽ 加油补给"
       },
       {
         "order": 12,
         "place": "Hawea Hotel, Eatery & Bar",
-        "note": "🏨 6277478265 PIN7315",
-        "time_sensitive": false,
-        "query": "Hawea Hotel, Eatery & Bar"
+        "note": "🏨 6277478265 PIN7315"
       },
       {
         "order": 13,
         "place": "Wedding Tree",
-        "note": "📸 景点",
-        "time_sensitive": false,
-        "query": "Wedding Tree"
+        "note": "📸 景点"
       },
       {
         "order": 14,
         "place": "The Neck",
-        "note": "📸 景点 Isthmus Peak、Breast Hill、Corner Peak",
-        "time_sensitive": false,
-        "query": "The Neck"
+        "note": "📸 景点 Isthmus Peak、Breast Hill、Corner Peak"
       }
-    ]
+    ],
+    "note": "🍳 07:30｜早餐 / The Greedy Cow Café\n🚗 08:00–09:30｜Tekapo → Salmon Shop\n🚗 09:30–10:30｜Salmon Shop → Mt Cook\n🥾 10:30–12:30｜往返徒步\n🚗 12:30–13:30｜Mt Cook → Twizel\n🛒 13:30–14:10｜Twizel 补给 · 加油\n🚗 14:10–16:10｜Twizel → Hawea\n⏰ 17:00 前到达\n🏨 16:10–17:30｜入住 · 整顿\n🍽️ 17:30–18:30｜酒店晚餐\n🌄 18:30–20:00｜The Neck 周边日落"
   },
   {
     "date": "2026-02-19",
@@ -321,88 +238,65 @@
       {
         "order": 1,
         "place": "Hawea Hotel, Eatery & Bar",
-        "note": "",
-        "time_sensitive": false,
-        "query": "Hawea Hotel, Eatery & Bar"
+        "note": ""
       },
       {
         "order": 2,
         "place": "Wanaka Hill Park Lookout",
-        "note": "🏞️ 途径景",
-        "time_sensitive": false,
-        "query": "Wanaka Hill Park Lookout"
+        "note": "🏞️ 途径景"
       },
       {
         "order": 3,
         "place": "That Wanaka tree",
-        "note": "📸 孤独的树",
-        "time_sensitive": false,
-        "query": "That Wanaka tree"
+        "note": "📸 孤独的树"
       },
       {
         "order": 4,
         "place": "Wanaka Station Park",
-        "note": "🌳 公园景",
-        "time_sensitive": false,
-        "query": "Wanaka Station Park"
+        "note": "🌳 公园景"
       },
       {
         "order": 5,
         "place": "Roys Peak Track Parking",
-        "note": "🅿️ ",
-        "time_sensitive": false,
-        "query": "Roys Peak Track Parking"
+        "note": "🅿️ "
       },
       {
         "order": 6,
         "place": "Paddle Wānaka",
-        "note": "🛶 皮划艇",
-        "time_sensitive": false,
-        "query": "Paddle Wānaka"
+        "note": "🛶 皮划艇"
       },
       {
         "order": 7,
         "place": "Rippon",
-        "note": "🍷 酒庄",
-        "time_sensitive": false,
-        "query": "Rippon"
+        "note": "🍷 酒庄"
       },
       {
         "order": 8,
         "place": "The Stoaker Room Wanaka",
-        "note": "🍽️",
-        "time_sensitive": false,
-        "query": "The Stoaker Room Wanaka"
+        "note": "🍽️"
       },
       {
         "order": 9,
         "place": "Outside Sports Wanaka",
-        "note": "🚴 骑行店",
-        "time_sensitive": false,
-        "query": "Outside Sports Wanaka"
+        "note": "🚴 骑行店"
       },
       {
         "order": 10,
         "place": "Racers Edge Bike",
-        "note": "🚴 骑行店",
-        "time_sensitive": false,
-        "query": "Racers Edge Bike"
+        "note": "🚴 骑行店"
       },
       {
         "order": 11,
         "place": "Kika",
-        "note": "🍽️ 5:30–9PM",
-        "time_sensitive": false,
-        "query": "Kika"
+        "note": "🍽️ 5:30–9PM"
       },
       {
         "order": 12,
         "place": "Edgewater Hotel - Lake Wanaka, New Zealand",
-        "note": "🏨 EXP-2219585529、1620548372",
-        "time_sensitive": false,
-        "query": "Edgewater Hotel - Lake Wanaka, New Zealand"
+        "note": "🏨 EXP-2219585529、1620548372"
       }
-    ]
+    ],
+    "note": "🌙 02:20–03:00｜起床 · 整理\n🚗 03:00–03:30｜Hawea → Roys Peak\n🥾 03:00–08:30｜Roys Peak 徒步\n🚗 08:30–09:00｜下山 → 接人\n🍽️ 09:00–10:00｜早午餐 · Wanaka Station Park\n🚗 10:00–10:30｜前往划船点\n🛶 10:30–12:30｜皮划艇 · Rippon\n🍽️ 12:30–14:00｜午餐\n🚴 14:30–17:00｜E-Bike 环湖\n🍽️ 17:30+｜Kika 晚餐 · 自由活动"
   },
   {
     "date": "2026-02-20",
@@ -410,88 +304,65 @@
       {
         "order": 1,
         "place": "Edgewater Hotel - Lake Wanaka, New Zealand",
-        "note": "booking numbers 345637356 + 345630437",
-        "time_sensitive": false,
-        "query": "Edgewater Hotel - Lake Wanaka, New Zealand"
+        "note": "booking numbers 345637356 + 345630437"
       },
       {
         "order": 2,
         "place": "Jackson Orchards",
-        "note": "⛽ 补给",
-        "time_sensitive": false,
-        "query": "Jackson Orchards"
+        "note": "⛽ 补给"
       },
       {
         "order": 3,
         "place": "Webb's Fruit",
-        "note": "⛽ 补给、水果",
-        "time_sensitive": false,
-        "query": "Webb's Fruit"
+        "note": "⛽ 补给、水果"
       },
       {
         "order": 4,
         "place": "AJ Hackett Kawarau Bungy Centre",
-        "note": "📸 蹦极打卡点",
-        "time_sensitive": false,
-        "query": "AJ Hackett Kawarau Bungy Centre"
+        "note": "📸 蹦极打卡点"
       },
       {
         "order": 5,
         "place": "Buckingham Street Car Park",
-        "note": "⛽ 箭镇补给",
-        "time_sensitive": false,
-        "query": "Buckingham Street Car Park New Zealand"
+        "note": "⛽ 箭镇补给"
       },
       {
         "order": 6,
         "place": "King Made Noodles Queenstown 金味德牛肉拉面(皇后镇店）",
-        "note": "🍽️",
-        "time_sensitive": false,
-        "query": "King Made Noodles Queenstown 金味德牛肉拉面(皇后镇店）"
+        "note": "🍽️"
       },
       {
         "order": 7,
         "place": "Lakeview Carpark",
-        "note": "🅿️ ",
-        "time_sensitive": false,
-        "query": "Lakeview Carpark"
+        "note": "🅿️ "
       },
       {
         "order": 8,
         "place": "Skyline Queenstown",
-        "note": "🎫 游玩项目 Skyline",
-        "time_sensitive": false,
-        "query": "Skyline Queenstown"
+        "note": "🎫 游玩项目 Skyline"
       },
       {
         "order": 9,
         "place": "Hanley Park Playground",
-        "note": "🌳 公园景",
-        "time_sensitive": false,
-        "query": "Hanley Park Playground New Zealand"
+        "note": "🌳 公园景"
       },
       {
         "order": 10,
         "place": "Lookout for Cecil Peak & Double Cone",
-        "note": "📸 海上钢琴师点",
-        "time_sensitive": false,
-        "query": "Lookout for Cecil Peak & Double Cone"
+        "note": "📸 海上钢琴师点"
       },
       {
         "order": 11,
         "place": "50A Park Street",
-        "note": "🏠 民宿HMEB99NYXH",
-        "time_sensitive": false,
-        "query": "50A Park Street New Zealand"
+        "note": "🏠 民宿HMEB99NYXH"
       },
       {
         "order": 12,
         "place": "Flame Bar & Grill",
-        "note": "🍽️（12-22PM）",
-        "time_sensitive": false,
-        "query": "Flame Bar & Grill"
+        "note": "🍽️（12-22PM）"
       }
-    ]
+    ],
+    "note": "🍳 07:30–08:00｜早餐 · 退房\n🚗 08:00–09:00｜Wanaka → Cromwell\n🧺 09:00–09:30｜水果 · 加油\n🚗 09:30–10:00｜Cromwell → Kawarau Bridge\n🎢 10:00–10:30｜蹦极点停留\n🚗 10:30–11:00｜前往 Arrowtown\n🏘️ 11:00–12:00｜Arrowtown 漫步\n🍽️ 12:00–14:00｜午餐\n🚗 14:00–14:30｜前往 Skyline\n🚠 14:30–17:30｜Skyline\n🍽️ 17:30+｜入住 · Flame Bar & Grill"
   },
   {
     "date": "2026-02-21",
@@ -499,88 +370,65 @@
       {
         "order": 1,
         "place": "50A Park Street",
-        "note": "",
-        "time_sensitive": false,
-        "query": "50A Park Street New Zealand"
+        "note": ""
       },
       {
         "order": 2,
         "place": "Lookout for Cecil Peak & Double Cone",
-        "note": "🏞️ 途径景",
-        "time_sensitive": false,
-        "query": "Lookout for Cecil Peak & Double Cone"
+        "note": "🏞️ 途径景"
       },
       {
         "order": 3,
         "place": "Seven Mile Point Track",
-        "note": "🏞️ 途径景",
-        "time_sensitive": false,
-        "query": "Seven Mile Point Track"
+        "note": "🏞️ 途径景"
       },
       {
         "order": 4,
         "place": "Wilson Bay Reserve",
-        "note": "🏞️ 途径景",
-        "time_sensitive": false,
-        "query": "Wilson Bay Reserve"
+        "note": "🏞️ 途径景"
       },
       {
         "order": 5,
         "place": "Ithilien Lookout (Lord of the Rings)",
-        "note": "🏞️ 途径景",
-        "time_sensitive": false,
-        "query": "Ithilien Lookout (Lord of the Rings)"
+        "note": "🏞️ 途径景"
       },
       {
         "order": 6,
         "place": "Bob's Cove Track",
-        "note": "🏞️ 途径景",
-        "time_sensitive": false,
-        "query": "Bob's Cove Track"
+        "note": "🏞️ 途径景"
       },
       {
         "order": 7,
         "place": "Bennetts Bluff Viewpoint Walking Track",
-        "note": "🏞️ 途径景",
-        "time_sensitive": false,
-        "query": "Bennetts Bluff Viewpoint Walking Track"
+        "note": "🏞️ 途径景"
       },
       {
         "order": 8,
         "place": "Glenorchy Wharf & Viewpoint",
-        "note": "📸 红房子",
-        "time_sensitive": false,
-        "query": "Glenorchy Wharf & Viewpoint"
+        "note": "📸 红房子"
       },
       {
         "order": 9,
         "place": "Dart River Adventures",
-        "note": "⏰ 9点前到达",
-        "time_sensitive": true,
-        "query": "Dart River Adventures"
+        "note": "⏰ 9点前到达"
       },
       {
         "order": 10,
         "place": "Glenorchy Lagoon Lookout",
-        "note": "🏞️ 途径景",
-        "time_sensitive": false,
-        "query": "Glenorchy Lagoon Lookout"
+        "note": "🏞️ 途径景"
       },
       {
         "order": 11,
         "place": "Bella Cucina",
-        "note": "🍽️  12:00–22:00",
-        "time_sensitive": false,
-        "query": "Bella Cucina"
+        "note": "🍽️  12:00–22:00"
       },
       {
         "order": 12,
         "place": "50A Park Street",
-        "note": "🏠 民宿",
-        "time_sensitive": false,
-        "query": "50A Park Street New Zealand"
+        "note": "🏠 民宿"
       }
-    ]
+    ],
+    "note": "🚗 07:00–08:30｜Queenstown → Glenorchy\n⏰ 09:00 前到达\n🌄 白天｜Glenorchy 三部曲\n🚗 15:00+｜返程 · 自由活动\n🍽️ 晚餐｜Bella Cucina"
   },
   {
     "date": "2026-02-22",
@@ -588,53 +436,40 @@
       {
         "order": 1,
         "place": "50A Park Street",
-        "note": "",
-        "time_sensitive": false,
-        "query": "50A Park Street New Zealand"
+        "note": ""
       },
       {
         "order": 2,
         "place": "Deer Park Heights Queenstown",
-        "note": "⏰ 7点到",
-        "time_sensitive": true,
-        "query": "Deer Park Heights Queenstown"
+        "note": "⏰ 7点到"
       },
       {
         "order": 3,
         "place": "Hobart Street",
-        "note": "⏰🅿️",
-        "time_sensitive": false,
-        "query": "Hobart Street New Zealand"
+        "note": "⏰🅿️"
       },
       {
         "order": 4,
         "place": "RealNZ | TSS Earnslaw Queenstown Cruise",
-        "note": "⏰ 10.30前到达 11点场次",
-        "time_sensitive": true,
-        "query": "RealNZ | TSS Earnslaw Queenstown Cruise"
+        "note": "⏰ 10.30前到达 11点场次"
       },
       {
         "order": 5,
         "place": "Shotover Jet Queenstown",
-        "note": "⏰ 15.30到 16点场次",
-        "time_sensitive": true,
-        "query": "Shotover Jet Queenstown"
+        "note": "⏰ 15.30到 16点场次"
       },
       {
         "order": 6,
         "place": "The Cow",
-        "note": "🍽️ 12–10PM",
-        "time_sensitive": false,
-        "query": "The Cow"
+        "note": "🍽️ 12–10PM"
       },
       {
         "order": 7,
         "place": "50A Park Street",
-        "note": "🏠 民宿",
-        "time_sensitive": false,
-        "query": "50A Park Street New Zealand"
+        "note": "🏠 民宿"
       }
-    ]
+    ],
+    "note": "🚗 07:00–09:30｜Deer Park Heights\n⏰ 07:00 到达\n🚢 10:30–14:30｜TSS Earnslaw\n⏰ 11:00 场次\n🚤 15:30–17:30｜Shotover Jet\n⏰ 16:00 场次\n🍽️ 17:30+｜The Cow · 自由活动"
   },
   {
     "date": "2026-02-23",
@@ -642,17 +477,14 @@
       {
         "order": 1,
         "place": "Fergbaker",
-        "note": "🍔 大脸汉堡",
-        "time_sensitive": false,
-        "query": "Fergbaker"
+        "note": "🍔 大脸汉堡"
       },
       {
         "order": 2,
         "place": "Rental Car Park Frankton, Queenstown 9300, New Zealand",
-        "note": "🅿️ 还车位置",
-        "time_sensitive": false,
-        "query": "Rental Car Park Frankton, Queenstown 9300, New Zealand New Zealand"
+        "note": "🅿️ 还车位置"
       }
-    ]
+    ],
+    "note": "✈️ 返程\nZQN → AKL → PEK → SHE"
   }
 ]
