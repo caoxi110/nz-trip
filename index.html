@@ -224,6 +224,29 @@ a.btn.walk{border-color:var(--accent)}
   font-weight:800;
   margin-top:2px;
 }
+/* ===== Mobile Timeline Optimization ===== */
+@media (max-width: 640px){
+  .details{
+    padding:10px 8px;
+  }
+
+  .timeline-item{
+    grid-template-columns:64px 1fr; /* 时间列收窄 */
+    gap:8px;
+  }
+
+  .t-time{
+    font-size:.68rem;
+    color:#64748B;
+    text-align:right;
+    padding-top:2px;
+  }
+
+  .t-content{
+    padding-left:2px; /* 向左靠 */
+    line-height:1.55;
+  }
+}
 
 
 </style>
