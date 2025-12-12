@@ -126,16 +126,116 @@ a.btn.walk{border-color:var(--accent)}
   font-size:.75rem;
   margin-top:24px;
 }
+
+/* ===== Hero 高级电影感 ===== */
+.hero{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-eyebrow{
+  font-size:.68rem;
+  letter-spacing:.22em;
+  color:#94A3B8;
+  margin-bottom:8px;
+}
+
+.hero-title{
+  font-size:2.0rem;
+  font-weight:800;
+  line-height:1.12;
+  margin:0;
+  background:linear-gradient(
+    180deg,
+    #F8FAFC 0%,
+    #CBD5E1 60%,
+    #94A3B8 100%
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero-sub{
+  margin-top:12px;
+  font-size:1rem;
+  color:#E5E7EB;
+}
+
+.hero-footnote{
+  margin-top:18px;
+  font-size:.72rem;
+  color:#94A3B8;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  right:-60px;
+  top:-60px;
+  width:220px;
+  height:220px;
+  background:radial-gradient(
+    circle,
+    rgba(56,189,248,.18),
+    rgba(56,189,248,0) 70%
+  );
+  pointer-events:none;
+}
+
+/* ===== Day Head（手帐章节风） ===== */
+
+.day-head{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  margin-bottom:8px;
+}
+
+.day-index{
+  font-size:.7rem;
+  letter-spacing:.18em;
+  color:var(--accent);
+  padding-top:2px;
+}
+
+.day-main{
+  line-height:1.25;
+}
+
+.day-date{
+  font-size:.8rem;
+  color:#94A3B8;
+}
+
+.day-place{
+  font-size:1.25rem;
+  font-weight:800;
+  margin-top:2px;
+}
+
+
 </style>
 </head>
 
 <body>
 <div class="wrap">
 
-<div class="card pad">
-  <h2>从沈阳冬夜到瓦纳卡日落</h2>
-  <div class="meta">一场属于我们的公路电影 · 自动封面 · 导航 · 手帐时间线</div>
+<div class="card pad hero">
+  <div class="hero-eyebrow">NEW ZEALAND ROAD TRIP · 2026</div>
+
+  <h1 class="hero-title">
+    从沈阳冬夜到瓦纳卡日落
+  </h1>
+
+  <div class="hero-sub">
+    一场属于我们的公路电影
+  </div>
+
+  <div class="hero-footnote">
+    自动封面 · 智能导航 · 手帐时间线
+  </div>
 </div>
+
 
 <div id="timeline"></div>
 
@@ -205,6 +305,16 @@ function emojiClass(line){
   if(/⏰/.test(line)) return "tag-time";
   return "";
 }
+function formatDateWithWeekday(dateStr){
+  const d = new Date(dateStr + "T00:00:00"); // 防止时区偏移
+  const weekdays = [
+    "Sunday","Monday","Tuesday","Wednesday",
+    "Thursday","Friday","Saturday"
+  ];
+  const wd = weekdays[d.getDay()];
+  return `${wd}, ${dateStr}`;
+}
+
 function parseTimeline(text){
   return text.split("\n").map(l=>{
     const m=l.match(/^([0-9:＋+–\-]+)\s*[｜| ]?(.*)$/);
@@ -232,7 +342,18 @@ const cover = getCoverByDate(
     coverDiv.textContent=cover.t;
     box.appendChild(coverDiv);
 
-    box.innerHTML+=`<h3>${day.date}</h3><div class="meta">Stops · ${day.stops.length}</div>`;
+// Day 编号：从 Day 2 开始
+const dayIndex = data.indexOf(day) + 2;
+
+box.innerHTML += `
+  <div class="day-head">
+    <div class="day-index">Day ${dayIndex}</div>
+    <div class="day-main">
+<div class="day-date">${formatDateWithWeekday(day.date)}</div>
+    </div>
+  </div>
+  <div class="meta">${day.stops.length} Stops</div>
+`;
 
     day.stops.forEach((s,i)=>{
       const stop=document.createElement("div");
